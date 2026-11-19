@@ -42,3 +42,45 @@ body[data-page="home"]{background:var(--paper)}
 /* Пояснение профиля и инструкции на главной. */
 .profile-panel>p{margin-bottom:24px}
 @media(max-width:560px){.scale-row{padding:7px 0}.home-scales{grid-template-columns:minmax(0,1fr)}}
+
+/* Мобильный экран вопроса: вся карточка занимает высоту вьюпорта,
+   список вариантов прокручивается внутри, кнопка «Далее» всегда видна. */
+@media(max-width:640px){
+  body[data-page="survey"]{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidden}
+  body[data-page="survey"] .site-header{flex:0 0 auto;width:calc(100% - 28px);min-height:0;padding:10px 0;gap:12px;flex-wrap:nowrap}
+  body[data-page="survey"] .site-header nav{display:none}
+  body[data-page="survey"] .brand{font-size:22px;letter-spacing:-.4px}
+  body[data-page="survey"] .brand-mark{font-size:26px;margin-right:6px}
+  body[data-page="survey"] .site-footer{display:none}
+  body[data-page="survey"] #main.wrap{flex:1 1 auto;display:flex;min-height:0;width:calc(100% - 28px)}
+  body[data-page="survey"] .survey-shell{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;width:100%;margin:0 auto;padding:8px 0 max(10px,env(safe-area-inset-bottom))}
+  body[data-page="survey"] .question-navigation{flex:0 0 auto;min-height:0;margin-bottom:6px;gap:22px}
+  body[data-page="survey"] .question-nav-button{min-height:34px;padding:2px 0;font-size:14px;gap:7px}
+  body[data-page="survey"] .question-nav-button .icon{width:17px;height:17px}
+  body[data-page="survey"] .survey-progress{flex:0 0 auto;margin-bottom:9px}
+  body[data-page="survey"] .progress-caption{margin-bottom:6px;font-size:11px}
+  body[data-page="survey"] .progress-bar{height:6px}
+  body[data-page="survey"] .instruction{flex:0 0 auto;margin:0 0 9px;font-size:11px;line-height:1.45}
+  body[data-page="survey"] .instruction-icon .icon{width:15px;height:15px;vertical-align:-2px}
+  body[data-page="survey"] .question-title{flex:0 0 auto;margin-bottom:10px;font-size:18px;line-height:1.35;letter-spacing:-.2px}
+  body[data-page="survey"] .answer-grid{flex:1 1 auto;min-height:0;grid-auto-rows:minmax(56px,1fr);align-content:start;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;gap:7px;padding:1px 2px 2px 0;scrollbar-width:thin}
+  body[data-page="survey"] .answer-card{padding:10px 12px;gap:10px;border-radius:10px}
+  body[data-page="survey"] .answer-card:focus-visible{outline-offset:-3px}
+  body[data-page="survey"] .answer-text{font-size:14px;line-height:1.35}
+  body[data-page="survey"] .answer-choice{width:34px;height:34px;padding:7px;border-radius:7px}
+  body[data-page="survey"] .answer-choice .icon{width:19px;height:19px}
+  body[data-page="survey"] .survey-controls{flex:0 0 auto;margin-top:9px;padding-top:9px;justify-content:stretch;border-top:1px solid var(--line)}
+  body[data-page="survey"] .survey-controls .button{flex:1 1 auto;width:100%;min-width:0;min-height:48px;padding:12px 16px;gap:14px;font-size:15px}
+  body[data-page="survey"] .survey-controls .button span{font-size:16px}
+}
+@media(max-width:640px) and (max-height:620px){
+  body[data-page="survey"] .survey-shell{padding-top:4px}
+  body[data-page="survey"] .question-navigation{margin-bottom:2px}
+  body[data-page="survey"] .survey-progress{margin-bottom:6px}
+  body[data-page="survey"] .instruction{margin-bottom:6px;font-size:10.5px}
+  body[data-page="survey"] .question-title{margin-bottom:7px;font-size:17px}
+  body[data-page="survey"] .answer-grid{gap:6px;grid-auto-rows:minmax(50px,1fr)}
+  body[data-page="survey"] .answer-card{padding:8px 11px}
+  body[data-page="survey"] .survey-controls{margin-top:7px;padding-top:7px}
+  body[data-page="survey"] .survey-controls .button{min-height:44px;padding:10px 14px}
+}
