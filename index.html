@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f2">
+  <meta name="description" content="13 тематических карточек и 13 направлений интереса, чтобы найти направления и примеры будущих профессий. Бесплатно, без регистрации и сервера.">
+  <title>Компас профессий — найди своё направление</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="engine.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержимому</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="Компас профессий — на главную"><span class="brand-mark" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span>Компас профессий</a>
+    <nav aria-label="Основная навигация"><a href="#how">Как устроен опрос</a><a href="#directions">Шкалы и профессии</a></nav>
+  </header>
+  <main id="main" class="wrap" tabindex="-1"></main>
+  <footer class="site-footer wrap"><a class="brand small" href="#"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg> Компас профессий</a><span>Не выбрать раз и навсегда. А найти, с чего начать.</span><span class="footer-local">Всё работает в твоём браузере</span></footer>
+  <dialog id="reset-dialog" aria-labelledby="reset-title"><div class="dialog-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9a8 8 0 1 1 0 6m0-12v6h6"/></svg></div><h2 id="reset-title">Начать с чистого листа?</h2><p>Текущие ответы и результат будут удалены из этого браузера.</p><div class="dialog-actions"><button class="button secondary" id="cancel-reset">Оставить ответы</button><button class="button primary" id="confirm-reset">Начать заново</button></div></dialog>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+  <noscript><p class="wrap">Чтобы пройти опрос, включи JavaScript в настройках браузера. Сервер и подключение к интернету не нужны.</p></noscript>
+</body>
+</html>
